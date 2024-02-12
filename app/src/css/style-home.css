@@ -25,7 +25,7 @@ body{
 }
 
 header{
-    background-color: #94e1ff;
+    background-color: #D4E7C5;
     height: 110px;
 }
 
@@ -44,16 +44,13 @@ img#logo{
     padding: 30px 20px;
 }
 
-img#logo:hover{
-    background: #94e1ff;
-}
 
 /* #primary-nav{
     flex: auto;
 } */
 
 nav{
-    background-color: #94e1ff;
+    background-color: #D4E7C5;
     height: 80px;
     width: 100%;
 }
@@ -69,8 +66,12 @@ nav ul li{
     margin: 0 5px;
 }
 
+img#logo:hover{
+    background: #D4E7C5;
+}
+
 nav ul li a{
-    color: #005f82;
+    color: #12372A;
     font-size: 15px;
     font-weight: 700;
     padding: 7px 12px;
@@ -80,7 +81,7 @@ nav ul li a{
 
 a.active,a:hover{
     color: #fff;
-    background: #005f82;
+    background: #436850;
     transition: .5s;
     text-decoration: none;
 }
@@ -133,14 +134,14 @@ a.hover:hover{
 }
 
 .col-md-7.banner h1{
-    color: #005f82;
+    color: #789461;
     font-size: 2.85rem;
     font-weight: 700;
     padding: 20px;
 }
 
 .col-md-7.banner h3{
-    color: #005f82;
+    color: #789461;
     font-weight: 500;
     padding: 20px;
 }
@@ -150,16 +151,6 @@ a.hover:hover{
 }
 
 
-.btn.btn-pledge{
-    font-weight: 600;
-    color: #fff;
-    padding: 5px 10px 5px 10px;
-    background-color: #005f82;
-}
-
-.btn.btn-pledge:hover{
-    background-color: #0079a8;
-}
 
 .btn-lg{
     padding: 15px 30px 15px 30px;
@@ -167,7 +158,7 @@ a.hover:hover{
 }
 
 .container-bg{
-    background-color: #d5ecf5;
+    background-color: #BFD8AF;
     padding: 25px 25px 50px 25px;
 }
 
@@ -219,16 +210,13 @@ a.hover:hover{
     margin: 20px;
 }
 
-.content-aware p{    
-}
-
 .content-aware h1{
-    color: #005f82;
+    color: #436850;
     font-weight: 800;
 }
 
 .content-aware h2, h4{
-    color: #0079a8;
+    color: #789461;
     font-weight: 600;
 }
 
@@ -246,7 +234,7 @@ a.hover:hover{
     max-width: 1440px;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #005f82;
+    background-color: #BFD8AF;
 }
 
 .accordian_label,
@@ -256,7 +244,7 @@ a.hover:hover{
 
 .accordian_label{
     display: block;
-    color: #fff;
+    color: black;
     font-weight: 600;
     cursor: pointer;
     position: relative;
@@ -281,8 +269,8 @@ a.hover:hover{
 }
 
 .accordian_content{
-    background: #d5ecf5;
-    color: #005f82;
+    background: #DBE7C9;
+    color: #294B29;
     padding: 15px 65px 15px 65px;
     line-height: 1.6;
     font-size: 1em;
@@ -304,7 +292,7 @@ a.hover:hover{
 }
 
 footer{
-    background-color: #005f82;
+    background-color: #BFD8AF;
     margin-top: 10px;
 }
 
@@ -328,12 +316,3 @@ footer{
     padding: 55px 0px 0px 0px;
 }
 
-#copyright{
-    color: #fff;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-    font-weight: 300;
-}

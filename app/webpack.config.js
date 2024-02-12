@@ -11,15 +11,12 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin([{ from: "./src/index.html", to: "index.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/homepage.html", to: "homepage.html" }]),
-    new CopyWebpackPlugin([{ from: "./src/html/about-us.html", to: "about-us.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/contact.html", to: "contact.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/awareness.html", to: "awareness.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/donor-registration.html", to: "donor-registration.html" }]),
-    new CopyWebpackPlugin([{ from: "./src/html/donor-pledge.html", to: "donor-pledge.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/patient-registration.html", to: "patient-registration.html" }]),
-    new CopyWebpackPlugin([{ from: "./src/html/verify-pledges.html", to: "verify-pledges.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/view-donors.html", to: "view-donors.html" }]),
-    new CopyWebpackPlugin([{ from: "./src/html/view-pledges.html", to: "view-pledges.html" }]),
+    
     new CopyWebpackPlugin([{ from: "./src/html/view-patients.html", to: "view-patients.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/transplant-matching.html", to: "transplant-matching.html" }]),
     new CopyWebpackPlugin([{ from: "./src/css/bootstrap.css", to: "css/bootstrap.css" }]),
@@ -39,10 +36,7 @@ module.exports = {
     new CopyWebpackPlugin([{ from: "./src/images/transplant-icon.svg", to: "images/transplant-icon.svg" }]),
     new CopyWebpackPlugin([{ from: "./src/images/waiting-list-icon.svg", to: "images/waiting-list-icon.svg" }]),
     new CopyWebpackPlugin([{ from: "./src/images/mail-icon.svg", to: "images/mail-icon.svg" }]),
-    new CopyWebpackPlugin([{ from: "./src/images/Gummadi.png", to: "images/Gummadi.png" }]),
-    new CopyWebpackPlugin([{ from: "./src/images/Boini.png", to: "images/Boini.png" }]),
-    new CopyWebpackPlugin([{ from: "./src/images/Rahul Sabinkar.png", to: "images/Rahul Sabinkar.png" }]),
-    new CopyWebpackPlugin([{ from: "./src/images/Sai Manikanta.png", to: "images/Sai Manikanta.png" }]),    
+   
   ],
   devServer: { contentBase: path.join(__dirname, "dist"), compress: true },
 };
