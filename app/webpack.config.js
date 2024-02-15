@@ -9,14 +9,13 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: "./src/index.html", to: "index.html" }]),
-    new CopyWebpackPlugin([{ from: "./src/html/homepage.html", to: "homepage.html" }]),
+    new CopyWebpackPlugin([{ from: "./src/html/register.html", to: "register.html" }]),
+    new CopyWebpackPlugin([{ from: "./src/html/index.html", to: "index.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/contact.html", to: "contact.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/awareness.html", to: "awareness.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/donor-registration.html", to: "donor-registration.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/patient-registration.html", to: "patient-registration.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/view-donors.html", to: "view-donors.html" }]),
-    
     new CopyWebpackPlugin([{ from: "./src/html/view-patients.html", to: "view-patients.html" }]),
     new CopyWebpackPlugin([{ from: "./src/html/transplant-matching.html", to: "transplant-matching.html" }]),
     new CopyWebpackPlugin([{ from: "./src/css/bootstrap.css", to: "css/bootstrap.css" }]),

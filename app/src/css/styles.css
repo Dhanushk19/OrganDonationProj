@@ -12,7 +12,14 @@ a{
   color: #fff !important;
 }
 
-
+nav ul li .button-login
+{
+  color: #99BC85;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 4px;
+}
 
 body{
   background: #D4E7C5 !important;
@@ -128,7 +135,7 @@ img.nav-logo{
   background: #99BC85;
   padding: 20px;
   border-radius: 12px;
-  margin-top: -2px;
+
   color: #fff;
 }
 

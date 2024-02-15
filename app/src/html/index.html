@@ -24,13 +24,16 @@
             <div class="row">
                     
                 <nav>
-                    <a href="homepage.html"><img id="logo" src="../images/organ-donation-platform-logo-1.svg" alt="Organ Donation Platform"></a>
+                    <a href="index.html"><img id="logo" src="../images/organ-donation-platform-logo-1.svg" alt="Organ Donation Platform"></a>
                     <ul>
                         <li><a class="active" href="">Home</a></li>
                         <!-- <li><a href="about-us.html">About Us</a></li> -->
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="awareness.html">Awareness</a></li>
-                        <li><a href="../index.html">Register</a></li>
+                        <li><a id='loginButton'  onclick="" class="button-login">
+                            Login with MetaMask
+                        </a></li>
+                          <li ><a id="userWallet" href="register.html"></a></li>
                     </ul>
                 </nav>
               
@@ -158,6 +161,53 @@
             </div> <!-- end of row -->
         </div> <!-- end of conatiner -->        
     </footer>
+    <script>
+        window.userWalletAddress = null
+        const loginButton = document.getElementById('loginButton')
+        const userWallet = document.getElementById('userWallet')
     
+        function toggleButton() {
+          if (!window.ethereum) {
+            loginButton.innerText = 'MetaMask is not installed'
+            
+            return false
+          }
+    
+          loginButton.addEventListener('click', loginWithMetaMask)
+        }
+    
+        async function loginWithMetaMask() {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+            .catch((e) => {
+              console.error(e.message)
+              return
+            })
+          if (!accounts) { return }
+    
+          window.userWalletAddress = accounts[0]
+          userWallet.innerText = 'Register'
+          loginButton.innerText = 'Sign out of MetaMask'
+    
+          loginButton.removeEventListener('click', loginWithMetaMask)
+          setTimeout(() => {
+            loginButton.addEventListener('click', signOutOfMetaMask)
+          }, 200)
+        }
+    
+        function signOutOfMetaMask() {
+          window.userWalletAddress = null
+          userWallet.innerText = ''
+          loginButton.innerText = 'Sign in with MetaMask'
+    
+          loginButton.removeEventListener('click', signOutOfMetaMask)
+          setTimeout(() => {
+            loginButton.addEventListener('click', loginWithMetaMask)
+          }, 200)
+        }
+    
+        window.addEventListener('DOMContentLoaded', () => {
+          toggleButton()
+        });
+      </script>
 </body>
 </html>
