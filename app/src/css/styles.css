@@ -21,6 +21,11 @@ nav ul li .button-login
   border-radius: 4px;
 }
 
+#loginButton:hover
+{
+  cursor: pointer;
+}
+
 body{
   background: #D4E7C5 !important;
   font-family: "Montserrat", sans-serif !important;
