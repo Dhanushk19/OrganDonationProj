@@ -3,17 +3,7 @@ pragma solidity ^0.8.10;
 
 contract DonorContract {
 
-    struct pledged
-    {
-        string fullname;
-        uint age;
-        string gender;
-        string medical_id;
-        string blood_type;
-        string[] organ;
-        uint weight;
-        uint height;
-    }
+  
 
     struct donor
     {
@@ -38,7 +28,7 @@ contract DonorContract {
         uint weight;
         uint height;
     }
-    mapping ( string =>pledged ) pledgedMap;
+    
     mapping ( string =>donor ) donorMap;
     mapping ( string =>patient) patientMap;
 
@@ -46,22 +36,7 @@ contract DonorContract {
     string[] DonorsArray;
     string[] PatientsArray;
 
-    function setPledge(string memory _fullname, uint _age, string memory _gender, string memory _medical_id,
-                       string memory _blood_type, string[] memory _organ, uint _weight, uint _height)
-    public
-    {
-        require ( keccak256(abi.encodePacked((pledgedMap[_medical_id].medical_id))) != keccak256(abi.encodePacked(_medical_id)));
-        pledgedMap[_medical_id].fullname = _fullname;
-        pledgedMap[_medical_id].age = _age;
-        pledgedMap[_medical_id].gender = _gender;
-        pledgedMap[_medical_id].medical_id = _medical_id;
-        pledgedMap[_medical_id].blood_type = _blood_type;
-        pledgedMap[_medical_id].organ = _organ;
-        pledgedMap[_medical_id].weight = _weight;
-        pledgedMap[_medical_id].height = _height;
-
-        PledgedArray.push(_medical_id);
-    }
+   
 
     function setDonors(string memory _fullname, uint _age, string memory _gender, string memory _medical_id,
                        string memory _blood_type, string[] memory _organ, uint _weight, uint _height)
@@ -97,19 +72,7 @@ contract DonorContract {
         PatientsArray.push(_medical_id);
     }
 
-    function getPledge(string memory _medical_id) view public returns(string memory, uint, string memory, string memory, string[] memory, uint, uint)
-    {
-        return
-        (
-            pledgedMap[_medical_id].fullname,
-            pledgedMap[_medical_id].age,
-            pledgedMap[_medical_id].gender,
-            pledgedMap[_medical_id].blood_type,
-            pledgedMap[_medical_id].organ,
-            pledgedMap[_medical_id].weight,
-            pledgedMap[_medical_id].height
-        );
-    }
+   
 
     function getDonor(string memory _medical_id) view public returns(string memory, uint, string memory, string memory, string[] memory, uint, uint)
     {
@@ -139,14 +102,7 @@ contract DonorContract {
         );
     }
 
-    function validatePledge(string memory _medical_id) view public returns(bool)
-    {
-
-     if (keccak256(abi.encodePacked((pledgedMap[_medical_id].medical_id))) == keccak256(abi.encodePacked(_medical_id)))
-        return true;
-     else return false;
-
-    }
+    
 
     function validateDonor(string memory _medical_id) view public returns(bool)
     {
@@ -166,10 +122,7 @@ contract DonorContract {
 
     }
 
-    function getAllPledgeIDs() view public returns(string[] memory)
-    {
-        return PledgedArray;
-    }
+   
 
     function getAllDonorIDs() view public returns(string[] memory)
     {
@@ -181,10 +134,7 @@ contract DonorContract {
         return PatientsArray;
     }
 
-    function getCountOfPledges() view public returns (uint)
-    {
-        return PledgedArray.length;
-    }
+   
 
     function getCountOfDonors() view public returns (uint)
     {
