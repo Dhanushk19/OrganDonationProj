@@ -32,7 +32,7 @@ contract DonorContract {
     mapping ( string =>donor ) donorMap;
     mapping ( string =>patient) patientMap;
 
-    string[] PledgedArray;
+   
     string[] DonorsArray;
     string[] PatientsArray;
 
